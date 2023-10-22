@@ -1,11 +1,12 @@
 import "./App.css";
 import Header from "./Components/Header/Header";
-import HomePage from "./Pages/HomePage";
+import MyRoutes from "./Routes/MyRoutes";
+
 function App() {
   return (
     <>
       <Header />
-      <HomePage />
+      <MyRoutes />
     </>
   );
 }
