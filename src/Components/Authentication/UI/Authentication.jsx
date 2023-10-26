@@ -1,9 +1,8 @@
 import { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-hot-toast";
-import { setUserAuthenticated } from "../../../store/actions/authActions";
 import { useDispatch } from "react-redux";
+import { userSignUp, userLogIn } from "../../../store/actions/authActions";
+
 const Authentication = () => {
   const [login, setLogin] = useState(false);
   const [adminLogin, setAdminLogin] = useState(false);
@@ -39,43 +38,25 @@ const Authentication = () => {
       password: password,
     };
 
-    try {
-      // when user create a new account
+    // when user create a new account
 
-      if (!login && !adminLogin) {
-        if (password.trim() === confirmPwd.trim()) {
-          const { data } = await axios.post(
-            "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyD4cRRZ8NF7yCvzoAJgGTLJCmXlJjlo7T0",
-            submitedVal
-          );
+    if (!login && !adminLogin) {
+      if (password.trim() === confirmPwd.trim()) {
+        // dispacthing the sign up action
+        dispatch(userSignUp(submitedVal));
 
-          // storing the idtoken into localstorage
-          localStorage.setItem("idToken", data.idToken);
-          dispatch(setUserAuthenticated(data.idToken));
-          // navigating to the profile page after successfull sign up
-
-          navigate("/profile");
-        } else {
-          alert("Password & Confirm Password should be match !");
-        }
-
-        /* -------------------------------------------------------------------------- */
-        /*                     WHEN USER TRY TO LOGIN HIS ACCOUNT                     */
-        /* -------------------------------------------------------------------------- */
-      } else if (login && !adminLogin) {
-        console.log("hello");
-        const { data } = await axios.post(
-          "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyD4cRRZ8NF7yCvzoAJgGTLJCmXlJjlo7T0",
-          submitedVal
-        );
-
-        localStorage.getItem("idToken", data.idToken);
-        dispatch(setUserAuthenticated(data.idToken));
-
+        // navigating to the profile page after successfull sign up
         navigate("/profile");
+      } else {
+        alert("Password & Confirm Password should be match !");
       }
-    } catch (error) {
-      toast.error(error.response.data.error.message);
+
+      // When user try to log in
+    } else if (login && !adminLogin) {
+      dispatch(userLogIn(submitedVal));
+
+      // navigating to the user profile page
+      navigate("/profile");
     }
   };
 

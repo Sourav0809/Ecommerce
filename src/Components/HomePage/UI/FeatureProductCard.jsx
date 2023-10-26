@@ -2,7 +2,7 @@
 import { HiStar } from "react-icons/hi";
 import Button from "../../UI/Button";
 
-const FeatureProduct = (props) => {
+const FeatureProductCard = (props) => {
   return (
     <div className=" border shadow-xl rounded-md w-[15rem] h-[28rem] min-[600px]:w-[22rem] min-[600px]:h-[36rem]  flex flex-col gap-2 ">
       <div className=" h-[65%] min-[600px]:h-[75%] p-4 px-7">
@@ -31,4 +31,4 @@ const FeatureProduct = (props) => {
   );
 };
 
-export default FeatureProduct;
+export default FeatureProductCard;

@@ -1,0 +1,1 @@
+export const verifyUserLink = "https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyD4cRRZ8NF7yCvzoAJgGTLJCmXlJjlo7T0"
