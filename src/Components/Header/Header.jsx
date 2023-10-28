@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   return (
-    <header className=" sticky top-0 left-0 bg-white flex h-16  justify-around items-center rounded-sm font-custom shadow-md">
+    <header className=" sticky z-30 top-0 left-0 bg-white flex h-16  justify-around items-center rounded-sm font-custom shadow-md">
       <div
         className="flex justify-center items-center text-blue-950 p-4 cursor-pointer"
         onClick={() => {

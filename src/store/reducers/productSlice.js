@@ -3,10 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const productSlice = createSlice({
     name: 'ProductSlice',
-    initialState: { featureProducts: [] },
+    initialState: { featureProducts: [], loader: true },
     reducers: {
         setFeatureProducts(state, action) {
             state.featureProducts = action.payload
+        },
+        setLoaderFalse(state) {
+            state.loader = false
         }
     }
 
@@ -15,4 +18,4 @@ const productSlice = createSlice({
 
 export default productSlice.reducer
 
-export const { setFeatureProducts } = productSlice.actions
+export const { setFeatureProducts, setLoaderFalse } = productSlice.actions
