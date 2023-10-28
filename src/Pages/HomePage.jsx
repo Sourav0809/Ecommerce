@@ -1,6 +1,7 @@
 import FeatureProductContainer from "../Components/HomePage/FeatureProductContainer";
 import MidBanner from "../Components/HomePage/UI/MidBanner";
 import TopBanner from "../Components/HomePage/UI/TopBanner";
+import CarouselContainer from "../Components/HomePage/UI/Carousel/CarouselContainer";
 import BottomBanner from "../Components/HomePage/UI/BottomBanner";
 import NewsLetter from "../Components/HomePage/UI/NewsLetter";
 import Footer from "../Components/HomePage/UI/Footer";
@@ -9,7 +10,7 @@ const HomePage = () => {
     <>
       <section>
         <div>
-          <TopBanner />
+          <CarouselContainer />
         </div>
 
         <div>
