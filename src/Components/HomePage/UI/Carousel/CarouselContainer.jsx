@@ -5,7 +5,13 @@ import TopBanner3 from "../TopBanners.jsx/TopBanner3";
 import TopBanner4 from "../TopBanners.jsx/TopBanner4";
 
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -17,12 +23,12 @@ import "swiper/css/scrollbar";
 const CarouselContainer = () => {
   return (
     <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       spaceBetween={50}
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
-      //   autoplay={{ delay: 1000 }}
+      autoplay={{ delay: 3000 }}
     >
       <SwiperSlide>
         <TopBanner1 />

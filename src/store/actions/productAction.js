@@ -3,6 +3,8 @@ import { featureProductLink } from "../../API/productPoints"
 import { setFeatureProducts } from "../reducers/productSlice"
 import { setLoaderFalse } from "../reducers/productSlice"
 import toast from "react-hot-toast"
+
+
 export const fetchFeatureProduct = () => {
 
     return async (dispatch) => {
@@ -16,7 +18,7 @@ export const fetchFeatureProduct = () => {
                 dispatch(setFeatureProducts(newProductArr))
 
 
-                // making the loader false after 5 sec
+                // making the loader false after 1 sec
                 setTimeout(() => {
                     dispatch(setLoaderFalse())
                 }, 5000);

@@ -3,7 +3,9 @@ const TopBanner4 = () => {
     <section className=" flex flex-col-reverse  md:flex-row h-[60vh] justify-center md:justify-between ">
       <div className=" flex flex-col justify-center  gap-3 p-5 pl-[5%] min-[500px]:p-10 md:pl-[10%]">
         <div className="font-custom">
-          <h1 className=" text-2xl min-[500px]:text-3xl">Hassle-Free</h1>
+          <h1 className=" text-2xl min-[500px]:text-3xl">
+            Hassle-Free-Purchase
+          </h1>
         </div>
         <div className=" text-4xl min-[500px]:text-6xl font-custom font-semibold">
           <h1 className=" text-blue-950">Get All Fashion Product </h1>

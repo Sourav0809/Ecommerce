@@ -36,7 +36,9 @@ const Header = () => {
             <NavLink to={"/"}>
               <h1 className="hover:text-green-500 cursor-pointer">Home</h1>
             </NavLink>
-            <h1 className="hover:text-green-500 cursor-pointer">Shop</h1>
+            <NavLink to={"/shop"}>
+              <h1 className="hover:text-green-500 cursor-pointer">Shop</h1>
+            </NavLink>
             <h1 className="hover:text-green-500 cursor-pointer">About</h1>
             <h1 className="hover:text-green-500 cursor-pointer">Contact</h1>
             <NavLink to={"/account"}>

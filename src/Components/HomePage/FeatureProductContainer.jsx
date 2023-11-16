@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import FeatureProductCard from "./UI/FeatureProductCard";
 import Card from "../UI/Card";
 import { useDispatch, useSelector } from "react-redux";
