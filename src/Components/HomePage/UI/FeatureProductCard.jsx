@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { HiStar } from "react-icons/hi";
 import Button from "../../UI/Button";
-import SkeletonCard from "../../UI/SkeletonCard";
 
 const FeatureProductCard = (props) => {
   return (

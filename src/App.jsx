@@ -5,8 +5,11 @@ import MyRoutes from "./Routes/MyRoutes";
 import { verfiyUser } from "./store/actions/authActions";
 import { useDispatch } from "react-redux";
 function App() {
+  
   // dispacth assignment
   const dispatch = useDispatch();
+
+
 
   /* -------------------------------------------------------------------------- */
   /*           WHEN USER REFRESH THE PAGE WE NEED TO REVERIFY THE USER          */

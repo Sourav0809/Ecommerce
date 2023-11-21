@@ -5,7 +5,7 @@ const ProductsCategory = () => {
     <>
       {/*Using product search component here*/}
 
-      <div className=" px-10 py-5 flex items-center flex-wrap gap-6 font-custom">
+      <div className=" px-10 mt-[11rem] md:mt-[9rem] py-5 flex items-center flex-wrap gap-6 font-custom">
         <div className=" flex flex-col justify-center items-center">
           <div className=" w-[16rem] h-[18rem] p-3 bg-green-100 rounded-md  hover:shadow-slate-500 shadow-lg cursor-pointer  ">
             <img
@@ -65,6 +65,12 @@ const ProductsCategory = () => {
           </div>
           <h1 className=" mt-2 font-medium text-xl text-blue-950">Eyeglass</h1>
         </div>
+      </div>
+
+      {/*Showing the filter result string */}
+
+      <div className=" mt-2 ml-10 font-2xl border-2 p-2 border-gray-300 inline-block font-custom">
+        {"Search String "}
       </div>
     </>
   );

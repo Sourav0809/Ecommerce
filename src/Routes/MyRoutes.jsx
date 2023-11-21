@@ -4,6 +4,7 @@ import AuthPage from "../Pages/AuthPage";
 import ProfileViewPage from "../Pages/ProfileViewPage";
 import { useSelector } from "react-redux";
 import ProductPage from "../Pages/ProductPage";
+import ProductDetailsPage from "../Pages/ProductDetailsPage";
 
 const MyRoutes = () => {
   const { isAuthenticated } = useSelector((state) => state.auth);
@@ -24,6 +25,7 @@ const MyRoutes = () => {
           <Route path="/home" element={<HomePage />} />
           <Route path="/account" element={<AuthPage />} />
           <Route path="/shop" element={<ProductPage />} />
+          <Route path="/productDetails/:id" element={<ProductDetailsPage />} />
           <Route path="/profile" element={<AuthPage />} />
           <Route path="*" element={<HomePage />} />
         </>
